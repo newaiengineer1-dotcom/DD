@@ -1,0 +1,4 @@
+# Optional: CrewAI + Groq LLM agents (heavy dependencies; install only where you enable LLM mode).
+-r requirements.txt
+crewai>=0.100
+groq>=0.11

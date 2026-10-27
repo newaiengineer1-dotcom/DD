@@ -1,0 +1,7 @@
+-r requirements-llm.txt
+pytest>=8
+# only needed to regenerate the synthetic data room:
+numpy>=1.26
+matplotlib>=3.8
+reportlab>=4.0
+pillow>=10
