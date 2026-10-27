@@ -1,0 +1,11 @@
+# Workstream Lead architecture: the Master Orchestrator talks to 8 leads, leads manage discipline agents.
+# depends_on drives the Dependency Manager (topological execution order).
+workstreams:
+  WS1: {name: "Project Governance and Requirements", lead: lead_ws1, depends_on: []}
+  WS2: {name: "Solar Resource and Energy Yield", lead: lead_ws2, depends_on: [WS1]}
+  WS3: {name: "PV and Balance of Plant Engineering", lead: lead_ws3, depends_on: [WS1, WS2]}
+  WS7: {name: "BESS Technical Specialization", lead: lead_ws7, depends_on: [WS1]}
+  WS4: {name: "Grid, Controls and Digital Systems", lead: lead_ws4, depends_on: [WS3, WS7]}
+  WS5: {name: "Delivery and Operations", lead: lead_ws5, depends_on: [WS3, WS4, WS7]}
+  WS6: {name: "Commercial and Specialist Assurance", lead: lead_ws6, depends_on: [WS3, WS5, WS7]}
+  WS8: {name: "Independent Assurance and Reporting", lead: lead_ws8, depends_on: [WS1, WS2, WS3, WS4, WS5, WS6, WS7]}

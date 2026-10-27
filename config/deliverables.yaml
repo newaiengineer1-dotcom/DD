@@ -1,0 +1,64 @@
+# Deliverable catalogue (61). kind: docx|xlsx|geojson|dxf|svg. builder: narrative (generic) or a special builder in helioassure/docs/renderer.py.
+# classes add extra approval gates (lender -> Lender Engineer, qa -> QA Manager, owner -> Owner's Engineer).
+deliverables:
+  - {id: D01, title: "Project Execution and Engineering Plan", ws: WS1, kind: docx, builder: narrative, needs: [project, plan]}
+  - {id: D02, title: "Employer Requirements Compliance Matrix", ws: WS1, kind: xlsx, builder: register_compliance, needs: [project]}
+  - {id: D03, title: "Applicable Codes and Standards Register", ws: WS1, kind: xlsx, builder: register_standards, needs: [project]}
+  - {id: D04, title: "Assumptions Register", ws: WS1, kind: xlsx, builder: register_assumptions, needs: [project]}
+  - {id: D05, title: "Outstanding Information Request (OIR) Register", ws: WS1, kind: xlsx, builder: register_oir, needs: [project]}
+  - {id: D06, title: "Deliverable Plan and Document Control Index", ws: WS1, kind: xlsx, builder: register_documents, needs: [project]}
+  - {id: D07, title: "Engineering Risk Register", ws: WS1, kind: xlsx, builder: register_risk, needs: [project]}
+  - {id: D08, title: "Solar Resource Assessment Review", ws: WS2, kind: docx, builder: narrative, agents: [solar_resource], needs: [project]}
+  - {id: D09, title: "Energy Yield Assessment Review (P50/P75/P90)", ws: WS2, kind: docx, builder: narrative, agents: [energy_yield], calcs: [yield_exceedance], needs: [project, yield]}
+  - {id: D10, title: "Loss and Uncertainty Review", ws: WS2, kind: docx, builder: narrative, agents: [energy_yield, solar_resource], needs: [project]}
+  - {id: D11, title: "Conceptual PV Layout Drawing (DXF)", ws: WS3, kind: dxf, builder: layout_dxf, needs: [pv_layout]}
+  - {id: D12, title: "PV Layout (GeoJSON)", ws: WS3, kind: geojson, builder: layout_geojson, needs: [pv_layout]}
+  - {id: D13, title: "PV Layout Plan (SVG)", ws: WS3, kind: svg, builder: layout_svg, needs: [pv_layout]}
+  - {id: D14, title: "Site Geometry and Coordinate Report", ws: WS3, kind: docx, builder: narrative, calcs: [site_geometry], needs: [geometry]}
+  - {id: D15, title: "Electrical Design Basis Review", ws: WS3, kind: docx, builder: narrative, agents: [electrical_design, pv_technology], needs: [electrical]}
+  - {id: D16, title: "String Sizing and DC/AC Calculation", ws: WS3, kind: docx, builder: narrative, calcs: [string_sizing, dc_ac], needs: [electrical]}
+  - {id: D17, title: "Transformer and MV Cable Calculation", ws: WS3, kind: docx, builder: narrative, calcs: [transformer_check, mv_cable_check], needs: [electrical]}
+  - {id: D18, title: "Civil and Structural Design Basis Review", ws: WS3, kind: docx, builder: narrative, agents: [civil_structural], needs: [project]}
+  - {id: D19, title: "Geotechnical Review Memo", ws: WS3, kind: docx, builder: narrative, agents: [geotechnical], needs: [project]}
+  - {id: D20, title: "Hydrology and Drainage Review", ws: WS3, kind: docx, builder: narrative, agents: [hydrology], needs: [project]}
+  - {id: D21, title: "Constructability Assessment", ws: WS3, kind: docx, builder: narrative, agents: [layout_constructability], calcs: [pv_layout], needs: [pv_layout]}
+  - {id: D22, title: "Cable Routing Schedule", ws: WS3, kind: xlsx, builder: register_cables, needs: [cables]}
+  - {id: D23, title: "Cable Route Drawing (SVG)", ws: WS3, kind: svg, builder: cable_svg, needs: [cables]}
+  - {id: D24, title: "Quantities Summary (conceptual take-off)", ws: WS3, kind: xlsx, builder: register_quantities, needs: [pv_layout, cables]}
+  - {id: D25, title: "Grid Connection Compliance Review", ws: WS4, kind: docx, builder: narrative, agents: [grid_integration, grid_interface], needs: [project]}
+  - {id: D26, title: "Power System Studies Review", ws: WS4, kind: docx, builder: narrative, agents: [power_system_studies], needs: [project]}
+  - {id: D27, title: "SCADA and PPC Architecture Review", ws: WS4, kind: docx, builder: narrative, agents: [scada_controls], needs: [project]}
+  - {id: D28, title: "PV-BESS-Grid Interface Review", ws: WS4, kind: docx, builder: narrative, agents: [bess_interface], needs: [electrical]}
+  - {id: D29, title: "EPC Scope and Interface Review", ws: WS5, kind: docx, builder: narrative, agents: [epc_construction], needs: [project]}
+  - {id: D30, title: "Construction Methodology and Schedule Review", ws: WS5, kind: docx, builder: narrative, agents: [epc_construction, procurement_quality], needs: [project]}
+  - {id: D31, title: "Equipment Quality and Inspection Test Plan Review", ws: WS5, kind: docx, builder: narrative, agents: [procurement_quality], needs: [project]}
+  - {id: D32, title: "Commissioning and Performance Test Plan Review", ws: WS5, kind: docx, builder: narrative, agents: [commissioning_testing], needs: [project]}
+  - {id: D33, title: "O&M Strategy and Availability Review", ws: WS5, kind: docx, builder: narrative, agents: [om_reliability], needs: [project]}
+  - {id: D34, title: "HSE Plan Review", ws: WS5, kind: docx, builder: narrative, agents: [hse], needs: [project]}
+  - {id: D35, title: "Spare Parts Strategy Review", ws: WS5, kind: docx, builder: narrative, agents: [om_reliability, procurement_quality], needs: [project]}
+  - {id: D36, title: "Commercial and Contract Risk Review", ws: WS6, kind: docx, builder: narrative, agents: [commercial_contract], needs: [project]}
+  - {id: D37, title: "Insurance and Insurability Review", ws: WS6, kind: docx, builder: narrative, agents: [insurance], needs: [project]}
+  - {id: D38, title: "Environmental, Social and Permitting Register", ws: WS6, kind: xlsx, builder: register_permits, needs: [project]}
+  - {id: D39, title: "OT Cybersecurity Assessment Review", ws: WS6, kind: docx, builder: narrative, agents: [ot_cyber], needs: [project]}
+  - {id: D40, title: "Financial Sensitivity Summary", ws: WS6, kind: docx, builder: narrative, agents: [project_finance], calcs: [project_economics, dscr_analysis], needs: [project]}
+  - {id: D41, title: "CAPEX / OPEX Summary", ws: WS6, kind: xlsx, builder: register_finance, needs: [project]}
+  - {id: D42, title: "BESS Technical Design Basis Review", ws: WS7, kind: docx, builder: narrative, agents: [bess_engineering], needs: [project]}
+  - {id: D43, title: "BESS Sizing, Degradation and Warranty Review", ws: WS7, kind: docx, builder: narrative, agents: [bess_engineering, ems_dispatch], calcs: [bess_cycle_warranty_check], needs: [project]}
+  - {id: D44, title: "BESS Layout Drawing (DXF)", ws: WS7, kind: dxf, builder: bess_dxf, needs: [bess_layout]}
+  - {id: D45, title: "BESS Layout (GeoJSON)", ws: WS7, kind: geojson, builder: bess_geojson, needs: [bess_layout]}
+  - {id: D46, title: "BESS Fire Safety Review", ws: WS7, kind: docx, builder: narrative, agents: [battery_safety], needs: [bess_layout]}
+  - {id: D47, title: "EMS and Dispatch Strategy Review", ws: WS7, kind: docx, builder: narrative, agents: [ems_dispatch], needs: [project]}
+  - {id: D48, title: "BESS Augmentation and Warranty Review", ws: WS7, kind: docx, builder: narrative, agents: [bess_engineering], needs: [project]}
+  - {id: D49, title: "Lender Technical Due Diligence Report", ws: WS8, kind: docx, builder: lender_report, classes: [lender], needs: [project]}
+  - {id: D50, title: "Conditions Precedent Schedule", ws: WS8, kind: xlsx, builder: register_cp, classes: [lender], needs: [project]}
+  - {id: D51, title: "Gap Analysis", ws: WS8, kind: xlsx, builder: register_gaps, classes: [lender], needs: [project]}
+  - {id: D52, title: "Executive Summary for Financiers", ws: WS8, kind: docx, builder: exec_summary, classes: [lender], needs: [project]}
+  - {id: D53, title: "QA Verification Report", ws: WS8, kind: docx, builder: qa_report, classes: [qa], needs: [project]}
+  - {id: D54, title: "Cross-Discipline Reconciliation Report", ws: WS8, kind: docx, builder: qa_report_xd, classes: [qa], needs: [project]}
+  - {id: D55, title: "Contradiction and Evidence Validation Report", ws: WS8, kind: docx, builder: qa_report_contra, classes: [qa], needs: [project]}
+  - {id: D56, title: "Master Compliance Matrix", ws: WS8, kind: xlsx, builder: register_compliance, needs: [project]}
+  - {id: D57, title: "Document Register and Revision Log", ws: WS8, kind: xlsx, builder: register_documents, needs: [project]}
+  - {id: D58, title: "Audit Trail Extract", ws: WS8, kind: xlsx, builder: register_audit, classes: [qa], needs: [project]}
+  - {id: D59, title: "Calculation Register", ws: WS8, kind: xlsx, builder: register_calcs, needs: [project]}
+  - {id: D60, title: "Evidence Register", ws: WS8, kind: xlsx, builder: register_evidence, needs: [project]}
+  - {id: D61, title: "Project Technical Summary", ws: WS8, kind: docx, builder: exec_summary, needs: [project]}

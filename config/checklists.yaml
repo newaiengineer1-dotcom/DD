@@ -1,0 +1,114 @@
+# Condensed checklists derived from Annexes D-H of the SolarPower Europe
+# "Technical Due Diligence Best Practice Guidelines for Hybrid Utility Solar PV & BESS" (Feb 2026).
+# Wording is paraphrased; extend/verify against the PDF (place it in ./knowledge/ to index it for the agents).
+# tiers: MIN = minimal requirement, BEST = best practice
+pre_development:
+  source: Annex D
+  sections:
+    "1 Project & site definition":
+      - {item: Project concept review, min: "clear capacity and basic grid point", best: "validated capacity, market-optimised use cases, preliminary grid studies"}
+      - {item: Site suitability, min: "basic map review, generic solar data", best: "detailed GIS, bankable solar resource data, hazard screening"}
+      - {item: Initial technology screening, min: "component types selected", best: "component choice considers site fit and market trends"}
+    "2 Soil studies": 
+      - {item: Geological & geotechnical data review, min: "general soil/geology maps", best: "desktop geotechnical study + preliminary borehole review"}
+      - {item: Hydrological assessment, min: "flood map check", best: "groundwater levels, drainage patterns"}
+      - {item: Soil contamination screening, min: "site-history review", best: "Phase I ESA"}
+    "3 Environmental & biodiversity":
+      - {item: Sensitive habitat mapping, min: "screen against public conservation maps", best: "ecologist desktop review + walkover"}
+      - {item: Preliminary ecological risk, min: "direct footprint", best: "connectivity, corridors, species-specific risks"}
+      - {item: Water resources, min: "source identification", best: "water balance and impact on aquatic ecosystems"}
+      - {item: Species-specific risks (birds), min: "migratory routes", best: "avian expert consultation"}
+      - {item: EU Nature Restoration Law screening, min: "screen against known restoration zones", best: "assessment against national restoration plans, authority consultation"}
+      - {item: Nature-inclusive / eco-certified potential, min: "basic biodiversity benefits", best: "early design integration, eco-certification"}
+      - {item: PFAS presence screening, min: "supplier declaration", best: "specific material declarations, PFAS-free alternatives"}
+    "4 Permitting":
+      - {item: Environmental permitting landscape (incl. EIA), min: "list of permits", best: "roadmap with timelines and authorities"}
+      - {item: Civil/building permitting landscape, min: "list of permits", best: "regulatory review, early discussions with authorities"}
+    "5 Archaeology & explosive ordnance":
+      - {item: Archaeological desk-based assessment, min: "public register check", best: "full DBA by qualified archaeologist"}
+      - {item: UXO/EOD risk assessment, min: "screen known risk areas", best: "specialist historical desk study + walkover"}
+    "6 Stakeholders, community, land":
+      - {item: SPV stakeholder mapping, min: "primary legal/financial stakeholders", best: "all internal/external incl. community and NGOs"}
+      - {item: Public perception & engagement plan, min: "local news check", best: "formal stakeholder analysis and engagement plan"}
+      - {item: Land tenure, min: "basic title search", best: "easements, encumbrances, indigenous rights review"}
+      - {item: Socio-economic profile, min: "demographic data", best: "preliminary socio-economic impact assessment"}
+    "7 Grid interconnection":
+      - {item: Grid capacity, min: "basic TSO/DSO inquiry", best: "formal grid feasibility study, queue position"}
+      - {item: Preliminary studies, min: "review available utility studies", best: "detailed preliminary studies with operator"}
+      - {item: Grid-forming (GFM) requirement assessment, min: "grid-code version mentions GFM?", best: "clause-level review, discussion with TSO/DSO"}
+    "8 Cost & schedule":
+      - {item: Budget review, min: "ROM estimate", best: "conceptual costing with risk contingency"}
+      - {item: Timeline review, min: "basic Gantt", best: "critical path incl. permitting, financing, supply-chain lead times"}
+    "9 Life cycle assessment":
+      - {item: LCA data review, min: "generic benchmarks", best: "supplier LCA/EPDs for key components"}
+      - {item: Supply-chain environmental hotspots, min: "common issues", best: "mapping and risk screening of critical raw materials"}
+contracting:
+  source: Annex E
+  sections:
+    "1 EPC agreement":
+      - {item: Scope of work, min: "basic scope", best: "detailed scope, interfaces, latest IEC/NFPA editions, local codes"}
+      - {item: Performance guarantees & LDs, min: "basic PR/capacity guarantee", best: "robust guarantees tied to verifiable tests, sufficient LDs, independent witness"}
+      - {item: Warranties, min: "standard workmanship clause", best: "clear claims process, exclusions, parent company guarantees"}
+      - {item: QA/QC plan, min: "generic plan", best: "project-specific; factory audits, PSI by AQL, PV EL/flash and BESS tests"}
+      - {item: Commissioning plan, min: "basic checklist", best: "multi-stage incl. off-grid/on-grid and GFM tests if required"}
+      - {item: HSSE plan, min: "standard plan", best: "site-specific incl. biodiversity protection, emergency protocols, security"}
+      - {item: Contractual risk allocation, min: "basic allocation", best: "balanced, reflects identified project-specific risks"}
+    "2 O&M agreement":
+      - {item: Scope of work, min: "preventive/corrective", best: "proactive maintenance, habitat management, optimised cleaning, BESS thermal management"}
+      - {item: Availability guarantees & LDs, min: "basic availability guarantee", best: "rigorous definitions of downtime, sufficient LDs"}
+      - {item: Reporting, min: "monthly basic KPIs", best: "root-cause analysis, environmental monitoring, degradation trends"}
+      - {item: Spare parts strategy, min: "basic list", best: "critical spares with stock levels, lead times, storage strategy"}
+      - {item: Warranty management, min: "basic claim process", best: "proactive checks and claim tracking"}
+    "3 Equipment supply agreements":
+      - {item: Technical specifications, min: "datasheet key parameters", best: "detailed review incl. IEC 61853 matrix, GFM validation"}
+      - {item: Product warranties, min: "standard", best: "minimal exclusions, escalation, long-term financial backing"}
+      - {item: Bankability & manufacturer solvency, min: "basic financial check", best: "independent bankability report (< 1 year old), track record"}
+financing:
+  source: Annex F
+  sections:
+    "1 Data consolidation & risk quantification":
+      - {item: P50/P75/P90 energy yield report, min: "P50/P90", best: "independent P50/P75/P90, detailed losses and uncertainty"}
+      - {item: BESS performance model, min: "manufacturer-data model", best: "independently validated; dispatch strategy, degradation curves"}
+      - {item: Comprehensive risk register, min: "basic identification", best: "quantified likelihood/impact, mitigation, ownership"}
+    "2 Financial sensitivity":
+      - {item: Technical input sensitivities, min: "PR, degradation", best: "all critical technical inputs; extreme scenarios"}
+      - {item: Merchant risk assessment, min: "high-level", best: "price volatility, negative prices, revenue stacking, hedging, BESS optimisation"}
+    "3 Report generation":
+      - {item: TDD report, min: "standard report", best: "structured, executive summary, actionable recommendations"}
+      - {item: Executive summary for financiers, min: "basic", best: "tailored to bankability"}
+      - {item: Gap analysis, min: "informal missing-items list", best: "formal gap analysis with action plan and owners"}
+    "4 Lender/investor interface":
+      - {item: Technical Q&A, min: "basic", best: "proactive, data-backed"}
+      - {item: CSDDD readiness, min: "basic understanding", best: "supply-chain mapping, grievance mechanisms, third-party audits"}
+      - {item: CSRD readiness, min: "basic understanding", best: "robust ESRS data collection"}
+construction:
+  source: Annex G
+  sections:
+    "1 Construction monitoring & QA/QC":
+      - {item: Electrical design & calculations (DC and AC, BESS), min: "basic diagram review", best: "stringing/MPPT, DC protection, LPS/SPD, cable sizing/losses, transformer sizing, grid-code compliance"}
+      - {item: Design change management, min: "major changes reviewed", best: "formal change process with independent review"}
+      - {item: QA/QC implementation, min: "PSI with AQL (ISO 2859-1)", best: "module EL + flash, VDE AR 90038-2, detailed site inspections"}
+      - {item: Progress monitoring, min: "major deliveries tracked", best: "logistics tracking, MC verification, critical path"}
+    "2 Commissioning oversight":
+      - {item: Commissioning plan review, min: "IEC 62446-1 checklist", best: "phased plan incl. GFM tests"}
+      - {item: Witnessing key tests, min: "insulation resistance, energisation", best: "all critical performance/safety tests, IR drone, EL samples, PVsyst model vs actuals"}
+      - {item: Test documentation, min: "basic reports", best: "raw data, signed, acceptance criteria met"}
+      - {item: PAC / FAC verification, min: "basic checklist", best: "against contractual definitions"}
+      - {item: Energisation, min: "basic checklist", best: "plan with TSO/DSO coordination, protection settings verified"}
+operation:
+  source: Annex H
+  sections:
+    "Performance monitoring":
+      - {item: SCADA review (IEC 61724-1), min: "basic functionality", best: "data integrity, resolution, alarms, archiving, remote control"}
+      - {item: Historical PR analysis, min: "monthly PR", best: "trend vs projections and benchmarks"}
+      - {item: Availability, min: "uptime", best: "downtime root causes vs contractual KPIs"}
+      - {item: Specific yield / EPI, min: "kWh/kWp", best: "weather-corrected expected output from validated model"}
+      - {item: Degradation, min: "overall", best: "vs warranties and IEC 61215/63209; BESS capacity fade"}
+      - {item: BESS RTE & SoC/SoH accuracy, min: "monitor", best: "direct measurement verification"}
+      - {item: GFM performance monitoring (if equipped), min: "monitor", best: "black start, synthetic inertia, V/f regulation vs contracts"}
+decommissioning:
+  source: Annex K (see PDF for detail)
+  sections:
+    "Decommissioning":
+      - {item: Decommissioning plan review, min: "plan exists", best: "see guideline Phase 6 / Annex K"}
+      - {item: Cost estimation review, min: "cost estimate exists", best: "see guideline; check financial security and salvage assumptions"}
