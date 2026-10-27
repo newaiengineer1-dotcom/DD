@@ -1,0 +1,35 @@
+{
+  "name": "Solara Alentejo Hybrid (PV + BESS)",
+  "code": "SAH-2026",
+  "lat": 37.62,
+  "lon": -8.19,
+  "site_area_ha": 262,
+  "pv_mwp": 150.0,
+  "pv_mwac": 120.0,
+  "module_wp": 580,
+  "bess_mw": 60,
+  "bess_containers": 54,
+  "container_mwh": 5.0,
+  "bess_usable_mwh_poi": 240,
+  "export_limit_mw": 130,
+  "exclusions": [
+    {
+      "id": "AR-07",
+      "lat": 37.6215,
+      "lon": -8.1935,
+      "r": 30
+    }
+  ],
+  "flags": {
+    "heritage_sensitive": true,
+    "land_title_complex": true,
+    "decommissioning_required": true,
+    "protected_habitat": true,
+    "community_required": true
+  },
+  "p50_specific_yield": 2061.2,
+  "capex_m": 155.5,
+  "opex_m": 5.39,
+  "price_eur_mwh": 43.0,
+  "debt_m": 108.0
+}
